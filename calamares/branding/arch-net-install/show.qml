@@ -38,7 +38,7 @@ Presentation
             source: "arch-net-install-final-view.jpg"
             width: 800; height: 350
             fillMode: Image.PreserveAspectFit
-			anchors.centerIn: parent
+			      anchors.centerIn: parent
         }
 
     }c

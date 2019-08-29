@@ -57,17 +57,14 @@ windowSize: 1200px,750px
 # are not supported (the rest are). Remember to quote the string
 # if it contains substitutions, or you'll get YAML exceptions.
 strings:
-    productName:         ArcoLinux
-    shortProductName:    ArcoLinux
+    productName:         Arch NetInstall
+    shortProductName:    Arch NetInstall
     version:             1.0
     shortVersion:        1.0
-    versionedName:       ArcoLinux
-    shortVersionedName:  ArcoLinux
-    bootloaderEntryName: ArcoLinux
-#    productUrl:          https://arcolinux.info/
-#    supportUrl:          https://arcolinux.info/
-#    knownIssuesUrl:      https://arcolinux.info/
-#    releaseNotesUrl:     https://arcolinux.info/
+    versionedName:       Arch NetInstall
+    shortVersionedName:  Arch NetInstall
+    bootloaderEntryName: Arch NetInstall
+
 
 # These images are loaded from the branding module directory.
 #
@@ -88,7 +85,7 @@ strings:
 images:
     productLogo:         "squid.png"
     productIcon:         "logo.png"
-    productWelcome:      "calamares-arcolinux-intro.png"
+    productWelcome:      "arch-net-install.jpg"
 
 # The slideshow is displayed during execution steps (e.g. when the
 # installer is actually writing to disk and doing other slow things).
