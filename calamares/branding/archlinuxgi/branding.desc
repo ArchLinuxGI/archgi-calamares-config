@@ -81,7 +81,7 @@ strings:
 #
 # These strings can also use substitutions from os-release (see above).
 images:
-    productLogo:         "squid.png"
+    productLogo:         "logo.png"
     productIcon:         "logo.png"
     productWelcome:      "welcome-archgi.jpg"
 
