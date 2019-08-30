@@ -6,6 +6,7 @@
 # file, also in the branding directory.
 ---
 componentName:  archlinuxgi
+
 # This selects between different welcome texts. When false, uses
 # the traditional "Welcome to the %1 installer.", and when true,
 # uses "Welcome to the Calamares installer for %1." This allows
@@ -112,7 +113,7 @@ slideshowAPI: 2
 # branding component also ships a stylesheet.qss. Then they are
 # the corresponding CSS attributes of #sidebarApp.
 style:
-   sidebarBackground:    "#353945"
+   sidebarBackground:    "#13191C"
    sidebarText:          "#ECEDEE"
    sidebarTextSelect:    "#FFFFFF"
    sidebarTextHighlight: "#D35400"
