@@ -1,4 +1,3 @@
-
 - name: "Default"
   description: "Default group"
   hidden: true
@@ -64,91 +63,84 @@
     - xf86-input-keyboard
     - xf86-input-mouse
 
-- name: "Graphical Environmment"
-  description: "Get your Desktop"
+- name: "xfce Desktop"
+  description: "Xfce groups"
   hidden: false
   selected: false
   critical: false
-    subgroups :
-      - name: "xfce Desktop"
-        description: "Xfce groups"
-        hidden: false
-        selected: false
-        critical: false
-          packages:
-          - xfce4
-          - xfce4-goodies
+    packages:
+    - xfce4
+    - xfce4-goodies
 
 
-      - name: "mate Desktop"
-        description: "Mate groups"
-        hidden: false
-        selected: false
-        packages:
-          - mate
-          - mate-extra
-          - filemanager-actions
-          - accountsservice
+- name: "mate Desktop"
+  description: "Mate groups"
+  hidden: false
+  selected: false
+  packages:
+    - mate
+    - mate-extra
+    - filemanager-actions
+    - accountsservice
 
-      - name: "gnome Desktop"
-        description: "Gnome groups"
-        hidden: false
-        selected: false
-        packages:
-          - gnome
-          - gnome-extra
-          - filemanager-actions
+- name: "gnome Desktop"
+  description: "Gnome groups"
+  hidden: false
+  selected: false
+  packages:
+    - gnome
+    - gnome-extra
+    - filemanager-actions
 
-      - name: "Kde Plasma Desktop"
-        description: "Plasma groups"
-        hidden: false
-        selected: false
-        packages:
-          - plasma
-          - kdebase
-          - kde-applications
+- name: "Kde Plasma Desktop"
+  description: "Plasma groups"
+  hidden: false
+  selected: false
+  packages:
+    - plasma
+    - kdebase
+    - kde-applications
 
 
-      - name: "Xorg"
-        description: "Xorg Groups"
-        hidden: true
-        selected: true
-        critical: false
-        packages:
+- name: "Xorg"
+  description: "Xorg Groups"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+    # xorg base
+    - xorg
+    - xorg-apps
+    - xorg-fonts-alias
+    - xorg-fonts-encodings
+    - xorg-fonts-misc
+    - xorg-res-utils
+    - xorg-server
+    - xorg-server-utils
+    - xorg-xauth
+    - xorg-xinit
+    - xorg-xkb-utils
+    # fonts
+    - terminus-font
+    - ttf-dejavu
+    - ttf-liberation
+    - wqy-microhei
+    - xorg-fonts-100dpi
+    - xorg-fonts-75dpi
+    - xorg-fonts-cyrillic
+    # additional stuff that needs xorg
+    - hicolor-icon-theme
 
-          # xorg base
-          - xorg
-          - xorg-apps
-          - xorg-fonts-alias
-          - xorg-fonts-encodings
-          - xorg-fonts-misc
-          - xorg-res-utils
-          - xorg-server
-          - xorg-server-utils
-          - xorg-xauth
-          - xorg-xinit
-          - xorg-xkb-utils
-          # fonts
-          - terminus-font
-          - ttf-dejavu
-          - ttf-liberation
-          - wqy-microhei
-          - xorg-fonts-100dpi
-          - xorg-fonts-75dpi
-          - xorg-fonts-cyrillic
-          # additional stuff that needs xorg
-          - hicolor-icon-theme
-
-      - name: "Display Manager Desktop"
-        description: "Display Manager groups"
-        hidden: false
-        selected: false
-        packages:
-          - lightdm-gtk-greeter-settings
-          - gdm
-          - lxdm
-          - lxdm-gtk3
-          - sddm
+- name: "Display Manager Desktop"
+  description: "Display Manager groups"
+  hidden: false
+  selected: false
+  packages:
+    - lightdm-gtk-greeter-settings
+    - gdm
+    - lxdm
+    - lxdm-gtk3
+    - sddm
 
 
 - name: " Video  Drivers"
@@ -196,7 +188,8 @@
   packages : 
     - open-vm-tools
     - xf86-video-vesa
-
+    - xf86-video-vmware
+    - virtual-guest-modules-arch
 
 
 - name : "Terminals"    
