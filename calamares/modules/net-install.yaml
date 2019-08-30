@@ -1,7 +1,4 @@
-# Example configuration with groups and packages, taken from Chakra Linux.
-#
-# This example is rather limited. See `README.md` for full documentation
-# on the configuration format.
+
 - name: "Default"
   description: "Default group"
   hidden: true
@@ -54,50 +51,106 @@
     - openssh
     - sudo
     - vim
-    - zsh # :D
     # archivers
     - p7zip
     - unarj
     - unrar
     - unzip
     - zip
-    
-
-- name: "Xorg"
-  description: "Xorg Groups"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-
-    # xorg base
-    - xorg
-    - xorg-apps
-    - xorg-fonts-alias
-    - xorg-fonts-encodings
-    - xorg-fonts-misc
-    - xorg-res-utils
-    - xorg-server
-    - xorg-server-utils
-    - xorg-xauth
-    - xorg-xinit
-    - xorg-xkb-utils
-    # fonts
-    - terminus-font
-    - ttf-dejavu
-    - ttf-liberation
-    - wqy-microhei
-    - xorg-fonts-100dpi
-    - xorg-fonts-75dpi
-    - xorg-fonts-cyrillic
-    # additional stuff that needs xorg
-    - hicolor-icon-theme
-        # xorg input drivers
+      # xorg input drivers
     - xf86-input-synaptics
     - xf86-input-wacom
     - xf86-input-evdev
     - xf86-input-keyboard
     - xf86-input-mouse
+
+- name: "Graphical Environmment"
+  description: "Get your Desktop"
+  hidden: false
+  selected: false
+  critical: false
+    subgroups :
+      - name: "xfce Desktop"
+        description: "Xfce groups"
+        hidden: false
+        selected: false
+        critical: false
+          packages:
+          - xfce4
+          - xfce4-goodies
+
+
+      - name: "mate Desktop"
+        description: "Mate groups"
+        hidden: false
+        selected: false
+        packages:
+          - mate
+          - mate-extra
+          - filemanager-actions
+          - accountsservice
+
+      - name: "gnome Desktop"
+        description: "Gnome groups"
+        hidden: false
+        selected: false
+        packages:
+          - gnome
+          - gnome-extra
+          - filemanager-actions
+
+      - name: "Kde Plasma Desktop"
+        description: "Plasma groups"
+        hidden: false
+        selected: false
+        packages:
+          - plasma
+          - kdebase
+          - kde-applications
+
+
+      - name: "Xorg"
+        description: "Xorg Groups"
+        hidden: true
+        selected: true
+        critical: false
+        packages:
+
+          # xorg base
+          - xorg
+          - xorg-apps
+          - xorg-fonts-alias
+          - xorg-fonts-encodings
+          - xorg-fonts-misc
+          - xorg-res-utils
+          - xorg-server
+          - xorg-server-utils
+          - xorg-xauth
+          - xorg-xinit
+          - xorg-xkb-utils
+          # fonts
+          - terminus-font
+          - ttf-dejavu
+          - ttf-liberation
+          - wqy-microhei
+          - xorg-fonts-100dpi
+          - xorg-fonts-75dpi
+          - xorg-fonts-cyrillic
+          # additional stuff that needs xorg
+          - hicolor-icon-theme
+
+      - name: "Display Manager Desktop"
+        description: "Display Manager groups"
+        hidden: false
+        selected: false
+        packages:
+          - lightdm-gtk-greeter-settings
+          - gdm
+          - lxdm
+          - lxdm-gtk3
+          - sddm
+
+
 - name: " Video  Drivers"
   description: "Video Drivers Groups"
   hidden: false
@@ -131,53 +184,66 @@
     - xf86-video-trident
     - xf86-video-tseng
     - xf86-video-v4l
-    - xf86-video-vesa
     - xf86-video-voodoo
     - mesa-libgl
+  
+
+- name : "Virtual Machines Utils"    
+  description : ""
+  hidden: false
+  selected : false
+  critical : false
+  packages : 
     - open-vm-tools
+    - xf86-video-vesa
 
-- name: "xfce Desktop"
-  description: "Xfce groups"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-    - xfce4
-    - xfce4-goodies
 
-- name: "mate Desktop"
-  description: "Mate groups"
-  hidden: false
-  selected: false
-  packages:
-    - mate
-    - mate-extra
-    - filemanager-actions
-    - accountsservice
 
-- name: "gnome Desktop"
-  description: "Gnome groups"
+- name : "Terminals"    
+  description : ""
   hidden: false
-  selected: false
-  packages:
-    - gnome
-    - gnome-extra
-    - filemanager-actions
+  selected : false
+  critical : false
+  packages : 
+    - termite
+    - rxvt-unicode
+    - xterm
+    - alacritty
+    - gnome-terminal 
+    - tilda
 
-- name: "Kde Plasma Desktop"
-  description: "Plasma groups"
-  hidden: false
-  selected: false
-  packages:
-    - plasma-meta
-    - kdebase-meta
-    - kde-applications-meta
+- name : "Graphical Editors"
+  description : ""
+  hidden : false
+  selected : false
+  critical : false
+  packages : 
+    - atom
+    - code
+    - gedit 
+    - geany
+    - mousepad 
 
-- name: "Display Manager Desktop"
-  description: "Display Manager groups"
-  hidden: false
-  selected: false
-  packages:
-    - lightdm-gtk-greeter-settings
-    - gdm
-    - lxdm
+- name : "System Utils"
+  description : ""
+  hidden : false
+  selected : false
+  critical : false 
+  packages : 
+    - git 
+    - gparted
+    - meld 
+    - dconf-editor
+    - htop
+
+- name : "Web Browsers"
+  description : "Some Browsers not get your locales configs"
+  hidden : false
+  selected : false
+  critical : false 
+  packages :    
+    - firefox
+    - opera 
+    - chromium
+    - midori
+    
