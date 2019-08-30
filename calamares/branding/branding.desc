@@ -5,8 +5,7 @@
 # Additional styling can be done using the stylesheet.qss
 # file, also in the branding directory.
 ---
-componentName:  arch-net-install
-
+componentName:  archlinuxgi
 # This selects between different welcome texts. When false, uses
 # the traditional "Welcome to the %1 installer.", and when true,
 # uses "Welcome to the Calamares installer for %1." This allows
@@ -57,13 +56,13 @@ windowSize: 1200px,750px
 # are not supported (the rest are). Remember to quote the string
 # if it contains substitutions, or you'll get YAML exceptions.
 strings:
-    productName:         Arch-NetInstall
-    shortProductName:    Arch-NetInstall
+    productName:         ArchLinuxGI
+    shortProductName:    ArchLinuxGI
     version:             1.0
     shortVersion:        1.0
-    versionedName:       Arch-NetInstall
-    shortVersionedName:  Arch-NetInstall
-    bootloaderEntryName: Arch-NetInstall
+    versionedName:       ArchLinuxGI
+    shortVersionedName:  ArchLinuxGI
+    bootloaderEntryName: ArchLinuxGI
 
 # These images are loaded from the branding module directory.
 #
@@ -84,7 +83,7 @@ strings:
 images:
     productLogo:         "squid.png"
     productIcon:         "logo.png"
-    productWelcome:      "arch-net-install.jpg"
+    productWelcome:      "welcome-archgi.jpg"
 
 # The slideshow is displayed during execution steps (e.g. when the
 # installer is actually writing to disk and doing other slow things).

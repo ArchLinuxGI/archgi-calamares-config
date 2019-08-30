@@ -35,12 +35,25 @@ Presentation
 
         Image {
             id: background1
-            source: "arch-net-install-final-view.jpg"
+            source: "archgi-slide1.jpg"
             width: 800; height: 350
             fillMode: Image.PreserveAspectFit
 			      anchors.centerIn: parent
         }
 
-    }c
+    }
+
+    Slide {
+
+        Image {
+            id: background1
+            source: "archgi-slide2.jpg"
+            width: 800; height: 350
+            fillMode: Image.PreserveAspectFit
+                  anchors.centerIn: parent
+        }
+
+    }
+
 
 }
